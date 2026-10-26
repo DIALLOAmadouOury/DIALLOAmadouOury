@@ -7,25 +7,35 @@ Je développe des systèmes où le code doit fonctionner avec le matériel : acq
 
 **Je recherche un stage de fin d'études de 6 mois, avec un démarrage en mars 2027, partout en France.**
 
-## Projets à découvrir
+## Trois projets, trois défis techniques
 
-### [FADEC Digital Twin — commande, FreeRTOS et IA embarquée](https://github.com/DIALLOAmadouOury/FADEC-DigitalTwin)
+### 🚀 [FADEC Digital Twin — Réguler un moteur simulé et détecter une anomalie](https://github.com/DIALLOAmadouOury/FADEC-DigitalTwin)
 
-Prototype sur **STM32L475** combinant un moteur **simulé**, une régulation **PID**, plusieurs tâches **FreeRTOS**, une détection expérimentale d'anomalies via **X-CUBE-AI** et une supervision **Python** par Wi-Fi/MQTT.
+**L'objectif :** réaliser sur STM32 un démonstrateur capable de **suivre une consigne de régime moteur**, puis de **repérer un changement de comportement lorsqu'une fuite de carburant est simulée**.
 
-**Dans le code :** [régulation PID](https://github.com/DIALLOAmadouOury/FADEC-DigitalTwin/blob/main/Core/Src/fadec_core.c) · [tâches embarquées](https://github.com/DIALLOAmadouOury/FADEC-DigitalTwin/blob/main/Core/Src/main.c) · [README et démonstration](https://github.com/DIALLOAmadouOury/FADEC-DigitalTwin)
+Un **correcteur PID** pilote le modèle moteur ; un petit réseau de neurones embarqué analyse son état. Les informations remontent vers un tableau de bord Python, où l'on peut déclencher une fuite simulée et observer l'alerte. Le tout associe **C embarqué, FreeRTOS, X-CUBE-AI et Wi-Fi/MQTT**.
 
-### [Reconnaissance de gestes — TinyML sur STM32](https://github.com/DIALLOAmadouOury/STM32-gesture-recognition)
+**[Voir les captures : fonctionnement normal vs fuite simulée](https://github.com/DIALLOAmadouOury/FADEC-DigitalTwin#démonstration-de-la-supervision)** · **[Explorer le firmware STM32](https://github.com/DIALLOAmadouOury/FADEC-DigitalTwin/tree/main/Core/Src)**
 
-Acquisition d'un accéléromètre **LSM6DSL en I²C**, traitement de fenêtres de données en **C**, inférence d'un réseau **Float32 directement sur STM32L475** avec X-CUBE-AI, puis affichage des résultats sur PC par **UART/Python**.
+*Il s'agit d'un moteur simulé et d'un prototype expérimental, pas d'un FADEC aéronautique certifié.*
 
-**À voir :** [firmware d'acquisition et d'inférence](https://github.com/DIALLOAmadouOury/STM32-gesture-recognition/blob/main/stm32_firmware/Core/Src/gesture_ia.c) · [vidéo de démonstration](https://raw.githubusercontent.com/DIALLOAmadouOury/STM32-gesture-recognition/main/assets/video_demo.mp4)
+### ✋ [Reconnaissance de gestes — Faire tourner l'IA directement sur STM32](https://github.com/DIALLOAmadouOury/STM32-gesture-recognition)
 
-### [Robot autonome — Coupe de France de Robotique 2025](https://github.com/DIALLOAmadouOury/Robot-Autonome)
+**L'objectif :** reconnaître un geste tracé dans l'air **sans envoyer les mesures à un serveur ou déléguer la reconnaissance au PC**.
 
-Projet **réalisé en équipe** : robot principal et PAMIs, intégration mécanique/électronique, programmation **Arduino/C++**, encodeurs, asservissement **PID**, capteurs ultrasoniques et essais sur le terrain.
+Le STM32 relève les accélérations de la main via un capteur **LSM6DSL**, prépare les données en **C**, puis exécute localement un réseau de neurones **X-CUBE-AI**. Le prototype distingue **L, O, Z et BRUIT** ; une interface Python affiche seulement le résultat reçu par UART.
 
-**À voir :** [code de commande des moteurs](https://github.com/DIALLOAmadouOury/Robot-Autonome/blob/main/Software/Moteurs.cpp) · [photos et démonstrations](https://github.com/DIALLOAmadouOury/Robot-Autonome)
+**[▶ Voir la démonstration vidéo](https://raw.githubusercontent.com/DIALLOAmadouOury/STM32-gesture-recognition/main/assets/video_demo.mp4)** · **[Lire le code d'acquisition et d'inférence](https://github.com/DIALLOAmadouOury/STM32-gesture-recognition/blob/main/stm32_firmware/Core/Src/gesture_ia.c)**
+
+### 🤖 [Robot autonome — Passer de la conception à un robot sur le terrain](https://github.com/DIALLOAmadouOury/Robot-Autonome)
+
+**L'objectif :** construire, en équipe, un robot autonome capable de **se déplacer avec précision et d'exécuter des actions sur le terrain** lors de la Coupe de France de Robotique 2025.
+
+Le projet réunit motorisation, électronique, capteurs et programmation **Arduino/C++**. Pour corriger les écarts de déplacement entre moteurs, le robot utilise les **encodeurs et un asservissement PID**. Nous avons aussi conçu et intégré des **PAMIs**, petits robots complémentaires.
+
+**[Voir le robot en compétition (photos et animation)](https://github.com/DIALLOAmadouOury/Robot-Autonome#le-robot-en-compétition)** · **[Consulter le code de l'asservissement](https://github.com/DIALLOAmadouOury/Robot-Autonome/blob/main/Software/Moteurs.cpp)**
+
+*Projet collectif de six étudiants ; les contributions et les essais sont détaillés dans le dépôt.*
 
 ## Compétences mises en pratique
 

@@ -5,7 +5,7 @@
 
 Je développe des systèmes où le code doit fonctionner avec le matériel : acquisition de capteurs, commande, traitement du signal, communication et validation sur cible. Mes projets vont du firmware STM32 à la robotique, avec une place particulière pour l'intégration et les essais.
 
-**Je recherche un stage de fin d'études de 6 mois, avec un démarrage entre janvier et mars 2027, partout en France.**
+**Je recherche un stage de fin d'études de 6 mois, avec un démarrage en mars 2027, partout en France.**
 
 ## Projets à découvrir
 

@@ -1,7 +1,7 @@
 # Amadou Oury Diallo
 
 **Élève ingénieur en dernière année (Bac+5) en instrumentation et systèmes embarqués — Sup Galilée**  
-**Firmware C/C++ · STM32 · FPGA/VHDL · Temps réel · Traitement du signal**
+**Firmware C/C++ · STM32 · FPGA/VHDL · Temps réel · Traitement du signal · IA embarquée (TinyML)**
 
 Je développe des systèmes où le code doit fonctionner avec le matériel : acquisition de capteurs, commande, traitement du signal, communication et validation sur cible. Mes projets vont du firmware STM32 à la robotique, avec une place particulière pour l'intégration et les essais.
 
